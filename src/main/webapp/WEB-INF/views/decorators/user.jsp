@@ -25,6 +25,7 @@
 
     <script src="<c:url value="/templates/js/pro.js"/>"></script>
     <script src="<c:url value="/templates/js/header_user.js"/>"></script>
+    <script src="<c:url value="/templates/js/pagination_main.js"/>"></script>
 <%--    <script src="<c:url value="/templates/js/pro.js"/>"></script>--%>
 <%--    <script src="<c:url value="/templates/js/detail.js"/>"></script>--%>
 <%--    <script src="<c:url value="/templates/js/create.js"/>"></script>--%>

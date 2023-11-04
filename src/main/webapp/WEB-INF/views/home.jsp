@@ -180,7 +180,6 @@
                                     </h3>
                                     <div class="container_item_product_detail_post_info_price_acreage_add">
                                         <span class="post_info_price">4 triệu/tháng</span>
-                                        <span class="post_info_acreage">{{this.acreage}}m²</span>
                                         <span class="post_info_add">${i.getLocation()}</span>
                                     </div>
 
