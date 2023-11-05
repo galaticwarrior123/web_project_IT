@@ -44,7 +44,7 @@
                                         <p>Nguyễn Văn A </p>
                                     </div>
                                     <div class="name_author_logout">
-                                        <a class="nav-link" href="/">
+                                        <a class="nav-link" href="/user/logout">
                                             <i class=material-icons>logout</i>
                                             Đăng xuất
                                         </a>

@@ -49,6 +49,7 @@ public class userController {
 
 
 
+
 //    @GetMapping(value = "")
 //    public String getAllUsers(ModelMap modelMap, HttpSession session){
 //        if(session.getAttribute("USERNAME")!= null){
@@ -102,6 +103,6 @@ public class userController {
     public String logOut(HttpSession session){
         session.removeAttribute("USERNAME");
         session.removeAttribute("id");
-        return "login";
+        return "redirect:/";
     }
 }

@@ -195,4 +195,13 @@ public class articleController {
         }
         return "redirect:/article/getArticlesByUser/" + session.getAttribute("id");
     }
+
+    @GetMapping(value="/check_1")
+    public String a (HttpSession session){
+        return "redirect:/user/article/getArticlesByUser/"+session.getAttribute("id");
+    }
+    @GetMapping(value="/update_check1")
+    public String b (HttpSession session){
+        return "redirect:/user/article/updateUser/"+session.getAttribute("id");
+    }
 }

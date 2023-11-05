@@ -1,9 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-
 <c:set var="article" value="1"> </c:set>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -52,13 +50,13 @@
                         </a>
                     </li>
                     <li class="nav-item manage_post_btn">
-                        <a class="nav-link" href="/user/article/getArticlesByUser/${article}">
+                        <a class="nav-link" href="/user/article/check_1">
                             <i class=material-icons>description</i>
                             Quản lý tin đăng
                         </a>
                     </li>
                     <li class="nav-item fix_info_author_btn">
-                        <a class="nav-link" href="/user/article/updateUser/${article}">
+                        <a class="nav-link" href="/user/article/update_check1">
                             <i class=material-icons>edit</i>
                             Sửa thông tin cá nhân
                         </a>

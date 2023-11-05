@@ -43,12 +43,6 @@ public class homeController {
 
 
 
-    @GetMapping(value = "/logout")
-    public String logOut(HttpSession session){
-        session.removeAttribute("USERNAME");
-        session.removeAttribute("id");
-        return "login";
-    }
 
     @GetMapping(value="/show/{articleID}")
     public String showDetail(){
