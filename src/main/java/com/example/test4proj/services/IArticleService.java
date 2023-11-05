@@ -9,4 +9,5 @@ public interface IArticleService {
 
     Iterable<article> findByUserId(Long user_id);
     Iterable<article> findByarticleTypeId(int articleTypeId);
+
 }

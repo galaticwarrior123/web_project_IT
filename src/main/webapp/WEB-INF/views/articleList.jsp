@@ -95,7 +95,7 @@
     <div class="manage_post_list_pagination">
         <button class="manage_post_list_pagination_btn_action prev">« Trước</button>
         <ul class="manage_post_list_pagination_btn">
-            <li class="manage_post_list_btn">1</li>
+<%--            <li class="manage_post_list_btn">1</li>--%>
         </ul>
         <button class="manage_post_list_pagination_btn_action next">Sau »</button>
     </div>

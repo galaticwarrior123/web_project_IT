@@ -85,8 +85,9 @@ public class articleController {
                 String upload = Constant.DIR + "\\articles\\";
                 UploadUtils.saveFile(upload,fileName,multipartFile);
             }
+            System.out.println("error");
             Article.setUserId((Long)session.getAttribute("id"));
-            Article.setArticleId(articleRepository.count() + 1);
+            Article.setArticleId(articleRepository.getMaxId() + 1);
             articleRepository.save(Article);
             return "redirect:/user/article/getArticlesByUser/" + session.getAttribute("id");
         }catch (Exception e){

@@ -327,7 +327,6 @@ body {
 
 .price_list {
     text-align: left;
-    font-size: 18px;
     margin-top: 20px;
     font-size: 1rem;
     font-weight: 500;
@@ -455,7 +454,13 @@ img {
 
 .post_info_name_detail:hover {
     color: #dc5f46; }
-
+.post_info_name_detail p{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
 .container_item_product_detail_post_info_price_acreage_add {
     display: inline-flex;
     justify-content: space-around;
@@ -599,13 +604,17 @@ img {
     list-style: none; }
 
 .container_item_other_screen_hot_news_list {
-    margin-right: 15px; }
+    margin-right: 15px;
+    margin-left:  10px;
+}
 
 .container_item_other_screen_hot_news_list_sub {
     display: flex;
     flex-direction: row;
     margin: 3px 0;
-    background-color: rgba(201, 193, 83, 0.2); }
+    background-color: rgba(201, 193, 83, 0.2);
+    border-top:1px solid #dfaeae;
+}
 
 .container_item_other_hot_news_pic {
     width: 60px;
@@ -622,10 +631,16 @@ img {
 .post_tittle {
     padding: 0;
     line-height: 2.3; }
-
-.post_tittle:hover {
+.post_tittle a:hover {
     color: #dc5f46; }
+.post_tittle a{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 1;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
 
+}
 .post_price {
     margin-bottom: 0;
     color: #2d00f3; }
