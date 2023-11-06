@@ -3,6 +3,8 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@taglib prefix="from" uri="http://www.springframework.org/tags/form" %>
 <c:set var="temp" value="${0}" > </c:set>
+
+
 <body >
 <div class="container">
     <div class="container_nav">
@@ -151,7 +153,7 @@
 
                                     </h3>
                                     <div class="container_item_product_detail_post_info_price_acreage_add">
-                                        <span class="post_info_price">4 triệu/tháng</span>
+                                        <span class="post_info_price">${i.getPrice()}/tháng</span>
                                         <span class="post_info_add">${i.getLocation()}</span>
                                     </div>
 
@@ -164,7 +166,7 @@
                                             <div class="container_item_product_detail_post_mes_logo_author">
                                                 <img src="../../public/img/account.png" alt="">
                                             </div>
-                                            <p class="post_user">{{this.user}}</p>
+                                            <p class="post_user"> </p>
                                         </div>
                                         <div class="container_item_product_detail_post_mes_tel">
                                             <button class="container_item_product_detail_post_mes_tel_1">Gọi
@@ -202,7 +204,7 @@
 
             <section class="container_item_other_screen_hot_news">
                 <span id="container_item_header">Tin mới đăng</span>
-                <c:forEach var="i" items="${articles}">
+                <c:forEach var="i" items="${reverseArticle}">
                     <c:if test="${temp != 9}" >
                         <div class="container_item_other_screen_hot_news_list">
                             <ul class="container_item_other_screen_hot_news_list_pro">
@@ -220,8 +222,8 @@
                                             </div>
 
                                             <div class="post_dav">
-                                                <span class="post_price">4 triệu/tháng</span>
-                                                <span class="post_time">1 giờ trước </span>
+                                                <span class="post_price">${i.getPrice()}/tháng</span>
+<%--                                                <span class="post_time">1 giờ trước </span>--%>
                                             </div>
                                         </div>
                                     </div>

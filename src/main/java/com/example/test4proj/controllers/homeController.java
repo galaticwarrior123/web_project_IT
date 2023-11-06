@@ -16,6 +16,9 @@ import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.Optional;
 
 @Controller
@@ -32,6 +35,14 @@ public class homeController {
     @GetMapping(value = "")
     public String getAllArticle(ModelMap modelMap){
         modelMap.addAttribute("articles",articleRepository.findAll());
+        Iterable<article> listArticle=articleRepository.findAll();
+
+        List<article> myListReverseArticles =new ArrayList<>();
+        for(article item : listArticle){
+            myListReverseArticles.add(item);
+        }
+        Collections.reverse(myListReverseArticles);
+        modelMap.addAttribute("reverseArticle",myListReverseArticles);
         return "home";
     }
     @GetMapping(value = "{ArticleTypeId}")
