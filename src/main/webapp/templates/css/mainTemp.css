@@ -238,7 +238,9 @@ a {
 
 .manage_post_list_pagination {
     display: flex;
-    margin-left: 30%; }
+    justify-content: space-evenly;
+
+}
 
 .manage_post_list_pagination_btn {
     display: flex;
@@ -261,15 +263,19 @@ a {
     border: 1px #fff;
     cursor: pointer;
     height: 40px; }
+.manage_post_body_item_info_detail{
+    line-height: 1;
+}
 .manage_post_body_item_info_detail p{
     /*width: 500px;*/
     overflow: hidden;
     text-overflow: ellipsis;
-    line-height: 25px;
+    line-height: 1;
     -webkit-line-clamp: 3;
     /*height: 75px;*/
     display: -webkit-box;
     -webkit-box-orient: vertical;
+
 }
 .change_password {
     width: 50%;
