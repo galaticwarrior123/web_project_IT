@@ -27,7 +27,7 @@ public class LoginController {
 
     @GetMapping(value=" ")
     public String Login(){
-        return "decorators/login";
+        return "common/login_signup/login";
     }
 
     @GetMapping(value="/register")
@@ -51,10 +51,17 @@ public class LoginController {
         }else{
             System.out.println("Fail");
             modelMap.addAttribute("ERROR", "Khong tim thay username hoac mat khau");
-            return "login";
+            return "common/login_signup/login";
         }
     }
 
-
+    @GetMapping(value="/fill_phone")
+    public String fill_phone(){
+        return "common/login_signup/fill_phone_number";
+    }
+    @GetMapping(value="/fill_otp")
+    public String fill_otp(){
+        return "common/login_signup/fill_code";
+    }
 
 }

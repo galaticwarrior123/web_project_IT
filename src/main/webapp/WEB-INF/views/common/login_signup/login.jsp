@@ -23,7 +23,7 @@
 
         <div class="remember-forgot">
             <label><input type="checkbox">Ghi nhớ đăng nhập</label>
-            <a href="#">Quên mật khẩu?</a>
+            <a href="/login/fill_phone">Quên mật khẩu?</a>
         </div>
 
         <p class="error">${ERROR}</p>
@@ -31,7 +31,7 @@
         <input type="submit" class="btn" value="Đăng nhập">
 
         <div class="login-register">
-            <p>Bạn chưa có tài khoản? <a href="/login/register" class="register-link">Đăng ký</a></p>
+            <p>Bạn chưa có tài khoản? <a href="/register/" class="register-link">Đăng ký</a></p>
         </div>
         <div class="login-register-exit">
             <p><a href="/">Trở lại</a></p>

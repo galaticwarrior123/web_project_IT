@@ -10,7 +10,7 @@ if(url.includes("InsertArticle")){
     manage_post_btn.classList.remove("highLight");
     fix_information_author_btn.classList.remove("highLight");
 }
-else if(url.includes("getArticlesByUser")){
+else if(url.includes("getArticlesByUser") || url.includes("UpdateArticle")){
     post_news_btn.classList.remove("highLight");
     manage_post_btn.classList.add("highLight");
     fix_information_author_btn.classList.remove("highLight");

@@ -25,12 +25,12 @@ public class RegisterController {
     @GetMapping(value="")
     public String Register(ModelMap modelMap){
         modelMap.addAttribute("user", new user());
-        return "register";
+        return "decorators/register";
     }
 
     @PostMapping(value = "/register2")
     public String register(ModelMap modelMap,
-                           @RequestParam("src/main/webapp/templates/users/image") MultipartFile multipartFile,
+                           @RequestParam("/src/main/webapp/templates/image") MultipartFile multipartFile,
                            @Valid @ModelAttribute("user") user User,
                            BindingResult bindingResult){
         try{
@@ -42,10 +42,10 @@ public class RegisterController {
             }
             User.setUserId(userRepository.count() + 1);
             userRepository.save(User);
-            return "login";
+            return "redirect:/login/";
         }catch (Exception e){
             modelMap.addAttribute("error",e.toString());
-            return "register";
+            return "redirect:/register/";
         }
     }
 }
