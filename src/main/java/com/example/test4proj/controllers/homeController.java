@@ -16,6 +16,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
+import java.util.List;
 import java.util.Optional;
 
 @Controller
@@ -24,7 +25,6 @@ public class homeController {
 
     @Autowired
     IUserService userService;
-
     @Autowired
     IUserRepository userRepository;
     @Autowired
@@ -40,10 +40,12 @@ public class homeController {
         modelMap.addAttribute("articles",articles);
         return "home";
     }
-
-
-
-
+    @PostMapping(value = "/search")
+    public String filterSubject(ModelMap modelMap, @RequestParam("filter") String filter){
+        List<article> articles= articleRepository.findBySubjectContains(filter);
+        modelMap.addAttribute("articles",articles);
+        return "home";
+    }
     @GetMapping(value="/show/{articleID}")
     public String showDetail(){
         return "showDetail";
