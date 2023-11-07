@@ -88,6 +88,9 @@ public class articleController {
             System.out.println("error");
             Article.setUserId((Long)session.getAttribute("id"));
             Article.setArticleId(articleRepository.getMaxId() + 1);
+
+            Article.setArticleId(articleRepository.getMaxId()+1);
+
             articleRepository.save(Article);
             return "redirect:/user/article/getArticlesByUser/" + session.getAttribute("id");
         }catch (Exception e){

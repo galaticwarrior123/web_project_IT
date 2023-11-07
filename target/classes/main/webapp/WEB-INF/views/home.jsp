@@ -2,10 +2,36 @@
          pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@taglib prefix="from" uri="http://www.springframework.org/tags/form" %>
-<c:set var="temp" value="${0}" > </c:set>
-
-
 <body >
+<%--<h1>Article List</h1>--%>
+<%--<a href="/1"> 1</a>--%>
+<%--<a href="/2"> 2</a>--%>
+<%--<a href="/3"> 3</a>--%>
+<%--<a href="/4"> 4</a>--%>
+<%--<table border="1">--%>
+<%--    <tr>--%>
+<%--        <td>ID</td>--%>
+<%--        <td>Name</td>--%>
+<%--        <td>Type</td>--%>
+<%--        <td>Area</td>--%>
+<%--        <td>Location</td>--%>
+<%--        <td>Description</td>--%>
+<%--        <td>Image</td>--%>
+<%--    </tr>--%>
+<%--    <c:forEach var ="i" items = "${articles}">--%>
+<%--        <tr>--%>
+<%--            <td>${i.getArticleId()}</td>--%>
+<%--            <td>${i.getSubject()}</td>--%>
+<%--            <td>${i.getArticleTypeId()}</td>--%>
+<%--            <td>${i.getAreaId()}</td>--%>
+<%--            <td>${i.getLocation()}</td>--%>
+<%--            <td>${i.getDescription()}</td>--%>
+<%--            <td>${i.getImages()}</td>--%>
+<%--        </tr>--%>
+<%--    </c:forEach>--%>
+<%--</table>--%>
+<%--<a href="/login"> Login</a>--%>
+
 <div class="container">
     <div class="container_nav">
         <div class="container_nav_tittle">
@@ -148,13 +174,13 @@
 
 
                                     <h3 class="container_item_product_detail_post_info_name">
-                                        <a class="post_info_name_detail" href="show/${i.getArticleId()}">
+                                        <a class="post_info_name_detail" href="detail/show/{{this.slug}}">
                                             <p>${i.getSubject()}</p>
                                         </a>
 
                                     </h3>
                                     <div class="container_item_product_detail_post_info_price_acreage_add">
-                                        <span class="post_info_price">${i.getPrice()}/tháng</span>
+                                        <span class="post_info_price">4 triệu/tháng</span>
                                         <span class="post_info_add">${i.getLocation()}</span>
                                     </div>
 
@@ -167,7 +193,7 @@
                                             <div class="container_item_product_detail_post_mes_logo_author">
                                                 <img src="../../public/img/account.png" alt="">
                                             </div>
-                                            <p class="post_user"> </p>
+                                            <p class="post_user">{{this.user}}</p>
                                         </div>
                                         <div class="container_item_product_detail_post_mes_tel">
                                             <button class="container_item_product_detail_post_mes_tel_1">Gọi
@@ -205,37 +231,6 @@
 
             <section class="container_item_other_screen_hot_news">
                 <span id="container_item_header">Tin mới đăng</span>
-                <c:forEach var="i" items="${reverseArticle}">
-                    <c:if test="${temp != 9}" >
-                        <div class="container_item_other_screen_hot_news_list">
-                            <ul class="container_item_other_screen_hot_news_list_pro">
-
-                                <li class="container_item_other_screen_hot_news_list">
-                                    <div class="container_item_other_screen_hot_news_list_sub">
-                                        <a href="show/${i.getArticleId()}">
-                                            <img class="container_item_other_hot_news_pic" src="/src/public/img/{{this.image}}"></img>
-                                        </a>
-
-                                        <div class="container_item_other_hot_news_info">
-
-                                            <div class="post_tittle">
-                                                <a href="show/${i.getArticleId()}">${i.getSubject()}</a>
-                                            </div>
-
-                                            <div class="post_dav">
-                                                <span class="post_price">${i.getPrice()}/tháng</span>
-<%--                                                <span class="post_time">1 giờ trước </span>--%>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-
-                            </ul>
-                        </div>
-                        <c:set var="temp" value="${temp+ 1}"> </c:set>
-                    </c:if>
-
-                </c:forEach>
 
 
             </section>

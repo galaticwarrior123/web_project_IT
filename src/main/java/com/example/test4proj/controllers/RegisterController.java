@@ -40,7 +40,7 @@ public class RegisterController {
                 String upload = Constant.DIR + "\\users\\";
                 UploadUtils.saveFile(upload,fileName,multipartFile);
             }
-            User.setUserId(userRepository.count() + 1);
+            User.setUserId(userRepository.getMaxId() + 1);
             userRepository.save(User);
             return "redirect:/login/";
         }catch (Exception e){
