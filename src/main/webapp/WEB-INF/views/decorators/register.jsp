@@ -48,7 +48,7 @@
     <div class="logreg-box">
         <div class="form-box register">
             <form:form action="/register/register2" method="post"
-                       modelAttribute="user" enctype="multipart/form-data">
+                       modelAttribute="user" enctype="multipart/form-data" >
                 <h2>Đăng ký</h2>
 
                 <div class="input-box">

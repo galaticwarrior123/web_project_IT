@@ -26,7 +26,7 @@ public class LoginController {
 
 
     @GetMapping(value=" ")
-    public String Login(){
+    public String login(){
         return "common/login_signup/login";
     }
 
@@ -55,13 +55,5 @@ public class LoginController {
         }
     }
 
-    @GetMapping(value="/fill_phone")
-    public String fill_phone(){
-        return "common/login_signup/fill_phone_number";
-    }
-    @GetMapping(value="/fill_otp")
-    public String fill_otp(){
-        return "common/login_signup/fill_code";
-    }
 
 }

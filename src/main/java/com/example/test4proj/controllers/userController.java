@@ -60,23 +60,6 @@ public class userController {
     }
 
 
-
-
-//    @GetMapping(value = "")
-//    public String getAllUsers(ModelMap modelMap, HttpSession session){
-//        if(session.getAttribute("USERNAME")!= null){
-//            Iterable<user> users = userRepository.findAll();
-//            modelMap.addAttribute("users",users);
-//            return "user";
-//        }
-//        return "login";
-//    }
-    @GetMapping(value = "/updateUser/{userId}")
-    public String updateUser(ModelMap modelMap, @PathVariable Long userId){
-//        modelMap.addAttribute("user", new user());
-        modelMap.addAttribute("user", userRepository.findById(userId).get());
-        return "updateUser";
-    }
     @PostMapping(value = "/UpdateUser/{userId}")
     public String UpdateUser(ModelMap modelMap,
                              @RequestParam("image") MultipartFile multipartFile,
